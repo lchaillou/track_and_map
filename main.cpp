@@ -49,8 +49,6 @@ int main(int argc, char *argv[])
             std::cout << "je suis le processeur " << rank << " et je ne sais pas quoi faire" << std::endl;
             MPI_Send(&rank, 1, MPI_INT, 0, 0, MPI_COMM_WORLD);
             MPI_Recv(&condition, 1, MPI_INT, 0, 0, MPI_COMM_WORLD, &status);
-            
-            unsigned int sleep(3);
         }
         std::cout<<"le processus "<<rank<<" a terminé"<<std::endl;
 
