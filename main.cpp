@@ -34,10 +34,10 @@ int main(int argc, char *argv[])
             MPI_Recv(&num_proc, 1, MPI_INT, MPI_ANY_SOURCE, 0, MPI_COMM_WORLD, &status);
             MPI_Send(&condition, 1, MPI_INT, num_proc, 0, MPI_COMM_WORLD);
         }
-        for (size_t i = 1; i < size; i++)
-        {
-            MPI_Recv(&num_proc, 1, MPI_INT, MPI_ANY_SOURCE, 0, MPI_COMM_WORLD, &status);
-        }
+        // for (size_t i = 1; i < size; i++)
+        // {
+        //     MPI_Recv(&num_proc, 1, MPI_INT, MPI_ANY_SOURCE, 0, MPI_COMM_WORLD, &status);
+        // }
         std::cout<<"fin"<<std::endl;
     }
 
